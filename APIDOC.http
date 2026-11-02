@@ -1,0 +1,38 @@
+###
+GET http://127.0.0.1:8000/recipes/ 
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/recipes/
+Content-Type: application/json
+
+{
+  "recipe_name": "Pancakes",
+  "ingredients": "2 cups flour, 2 eggs, 1 cup milk, 1 tbsp sugar, 1 tsp baking powder",
+  "instructions": "Mix ingredients, pour into pan, flip and cook.",
+  "category": "Breakfast",
+  "preparation_time": 15,
+  "cooking_time": 20,
+  "servings": 3
+}
+
+###
+GET http://127.0.0.1:8000/recipes/6/ 
+Accept: application/json
+
+###
+PUT http://127.0.0.1:8000/recipes/3/ 
+Accept: application/json
+
+{
+  "recipe_name": "Updated Pancakes",
+  "ingredients": "4 cups flour, 4 eggs, 2 cups milk, 1 tbsp sugar, 1 tsp baking powder",
+  "instructions": "Mix ingredients, pour into pan, flip and cook.",
+  "category": "Breakfast",
+  "preparation_time": 15,
+  "cooking_time": 20,
+  "servings": 6
+}
+
+###
+DELETE http://127.0.0.1:8000/recipes/4/ 
